@@ -1,0 +1,38 @@
+<html>
+<title>spaceInvaders</title>
+<head> 
+    <script type="text/javascript" src="libraries/p5.min.js"></script>
+    <script type="text/javascript" src="libraries/p5.sound.js"></script>
+    <script type="text/javascript" src="libraries/p5.dom.js"></script>
+    <script type="text/javascript" src="libraries/p5.dom.min.js"></script>
+    
+    <script type="text/javascript" src="sketch.js"></script>
+        <script type="text/javascript" src="bullets.js"></script>
+        <script type="text/javascript">
+  var keys = {};
+window.addEventListener("keydown",
+    function(e){
+        keys[e.keyCode] = true;
+        switch(e.keyCode){
+            case 37: case 39: case 38:  case 40: // Arrow keys
+            case 32: e.preventDefault(); break; // Space
+            default: break; // do not block other keys
+        }
+    },
+false);
+window.addEventListener('keyup',
+    function(e){
+        keys[e.keyCode] = false;
+    },
+false);  
+</script>
+
+    <script type="text/javascript" src="ship.js"></script>
+        <script type="text/javascript" src="enemy.js"></script>
+                    <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+
+</head>
+<body>
+	<p style="font-size: 32" id="score"></p>
+</body>
+</html>
